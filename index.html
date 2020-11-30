@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Handling User Input</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.js"></script>
+    <script type="module">
+    import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.0/dist/vue.esm.browser.js'
+    </script>
+    <!-- Menyisipkan Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue.dist.vue.js"></script>
+</head>
+<body>
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+        <input v-model="message">
+    </div>
+
+    <script>
+        var app6 = new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Hello Vue!'
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
+
+
+
